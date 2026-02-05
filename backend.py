@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify 
+from flask import Flask, request, jsonify, render_template
+
 from flask_cors import CORS
 import ipaddress, socket
 import re
@@ -15,7 +16,7 @@ def home():
     Health-check route.
     Used to verify that the backend server is running.
     """
-    return "<h1>Backend is running</h1><p>Scanner service active</p>" 
+    return render_template("index.html")
 
 @app.route("/scan-url", methods=["POST"]) 
 def scan_url():
