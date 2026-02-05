@@ -1,3 +1,6 @@
+// Base URL of deployed backend
+const BASE_URL = "https://beginner-network-scanner.onrender.com";
+
 //phishing website checker
 async function checkURL() {
   const url = document.getElementById("urlInput").value;
@@ -9,7 +12,7 @@ async function checkURL() {
     return;
   }
 
-  const response = await fetch("http://127.0.0.1:5000/scan-url", {
+  const response = await fetch(`${BASE_URL}/scan-url`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -42,7 +45,7 @@ async function analyzeIP() {
     return;
   }
 
-  const response = await fetch("http://127.0.0.1:5000/analyze-ip", {
+  const response = await fetch(`${BASE_URL}/analyze-ip`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
