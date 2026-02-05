@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phishing Website Detection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Phishing Website Detection -->
+    <div class="toolkit">
+      <div class="container">
+        <h1>Phishing Website Detection</h1>
+        <p>This tool helps users identify potentially phishing websites</p>
+        <label>Website URL:</label>
+        <input
+          type="text"
+          id="urlInput"
+          placeholder="Enter the website URL here"
+        />
+        <button onclick="checkURL()">Check Website</button>
+        <div id="result"></div>
+      </div>
+
+      <!-- IP Address Analyzer -->
+      <div class="container ip-container">
+        <h1>IP Address Analyzer</h1>
+        <p>Analyze an IP address to understand its type and security risk.</p>
+        <label>IP Address:</label>
+        <input
+          type="text"
+          id="ipInput"
+          placeholder="Enter IP Address(e.g. 192.168.1.1)"
+        />
+        <button onclick="analyzeIP()">Analyze IP</button>
+        <div id="ipResult" class="result-box"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
